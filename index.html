@@ -48,25 +48,30 @@
     <hr>
     <h2>Lista não ordenada</h2>
     <ul>
+    <dt>
         <li>Panquecas</li>
         <li>uvas</li>
         <li>maça</li>
     </ul>
     <h2>Lista ordenada</h2>
-    <ol>
+    <dt>
         <li>Panquecas</li>
         <li>uvas</li>
         <li>maça</li>
     </ol>
     
     <dl>
+        <dt>Bacon</dt>
+        <dd>fundamental</dd>
+        <dt>Porco</dt>
+        <dd></dd>
         <dt>Café</dt>
         <dd>Bebidas fundamentais para vida</dd>
         <dt>Água</dt>
         <dd>Segunda bebida fundamental para a vida</dd>
     </dl>
     <hr>
-    <h1>Tags de formatação</h1>
+    <h1 style="color:#FF0000">Tags de formatação</h1>
     <p>Lorem ipsum <strong>Negrito = strong</strong> dolor, <sub>Subescrito = sub</sub>sit <sup>Sobreescrito = sup</sup>amet <br> <strong>Tag para quebrar a linha = br</strong> <br> consectetur <mark>Marca o texto: mark </mark>adipisicing elit. Odio obcaecati quas omnis, expedita ducimus modi atque reprehenderit, dolor tenetur praesentium sunt! Magnam, labore earum! Eligendi et veniam numquam eius.</p>
     <hr>
     <h1>Criar links e imagem</h1>
@@ -104,8 +109,9 @@
     <hr>
     <h1>Formularios</h1>
     <form action="https://google.com/search">
-        <label for="q">Query de Busca</label><br>
-        <input id="q" name="q" type="text">
+        <input type="text" value="" placeholder="Entre com seu nome" >
+        <label for="CAMPOIMPUT">Query de Busca</label><br>
+        <input id="CAMPOIMPUT" name="q" type="text" draggable="true" value="2006-02-08">
         <input type="submit" value="Buscas">
     </form>
 </body>
