@@ -8,25 +8,29 @@
         float: right;
     }
     html,body{border-color: red;}
+    .container{margin-top: 100px;}
     .box{display: inline-block;
     width:  100px; 
     height: 100px;
     position: static;
     }
     #box2{position: relative;
-        top:30px;
-        left: 30px;
+        top:100px;
+        
     }
+    .container{position: relative;}
     #box3{position: absolute;
-        top: 50px;
-    }
-    .container{
-        position: relative;
+        background-color: gray;
+        top: 1px;
+        left: 10px;
+        z-index: -1;
     }
     #box4{position: fixed;
-        background-color: chartreuse;
-        right: 10px;
-        bottom: 10px;
+        background-color: magenta;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: +1;
     }
     </style>
     <title>Document</title>
