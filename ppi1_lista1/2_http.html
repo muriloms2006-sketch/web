@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo HTTP</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: whitesmoke;
+        }
+        h1, h2{
+            color: red;
+        }
+        img{
+            width: 400px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+        code{
+            background-color: blueviolet;
+            padding: 5px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        th, td{
+            border: 1px solid gray;
+            padding: 8px;
+            text-align: left;
+        }
+        caption{
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h1>Protocolo HTTP</h1>
+        O <strong>HTTP</strong> (Hypertext Transfer Protocol) é um protocolo que estabelece
+        as regras para a troca de dados na <b>Web</b>, funcionando com cliente-servidor. Ele 
+        permite que <b>mavegadores</b> (clientes) solicitem recursos como página HTML, imagens
+        e arquivos de servidores de web, que respondam às aquisições. O HTTP é a base para 
+        carregar páginas na internet, e sua versão segura é o <mark>HTTPS</mark>, que criptografa 
+        os dados transmitidos. 
+    </p>
+    <h2>Como funciona o HTTP</h2>
+    <p>O HTTP (Protocolo de Transferência de Hipertexto) funciona como uma troca de mensagens entre
+         um cliente (como um navegador) e um servidor web, em um modelo cliente-servidor. O cliente 
+         envia uma requisição HTTP (por exemplo, GET para buscar uma página) e o servidor responde 
+         com uma mensagem que contém os dados solicitados ou um código de status que indica o resultado.
+         Essa troca permite a transferência de recursos como páginas HTML, imagens e arquivos,
+         e é a base da navegação na web. 
+        </p>
+        <img src="https://www.google.com/imgres?q=como%20funciona%20o%20http%20resumo&imgurl=https%3A%2F%2Farquivo.devmedia.com.br%2Fartigos%2FThiago_Varallo%2FFuncionamentoWeb%2FFuncionamentoWeb2.jpg&imgrefurl=https%3A%2F%2Fwww.devmedia.com.br%2Fcomo-funcionam-as-aplicacoes-web%2F25888&docid=mCKAF3SUxUao5M&tbnid=7BiSTCE0RUIbIM&vet=12ahUKEwiAs6rs2cCQAxUNH7kGHXoaJloQM3oECBkQAA..i&w=640&h=369&hcb=2&ved=2ahUKEwiAs6rs2cCQAxUNH7kGHXoaJloQM3oECBkQAA"
+        alt="Diagrama do HTTP">
+        <h2>Exemplo de Requisição (Request)</h2>
+        <code>
+            GET /path/to/resource HTTP/1.1<br>
+            Host: www.exemplo.com.br<br>
+            User-Agent: Navegador/X.Y<br>
+            Accept: text/html<br>
+        </code>
+        <h2>Exemplo de Resposta (Response)</h2>
+        <code>
+            HTTP/1.1 200 OK<br>
+            Content-Type: text/html<br>
+            Content-Length: 1200<br><br>
+            &lt;html&gt;&lt;body&gt;Olá, mundo!&lt;/body&gt;&lt;/html&gt;
+        </code>
+        <h2>Principais Campos de uma Requiição HTTP</h2>
+        <table>
+            <caption>Campos de uma Requisição HTTP</caption>
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>URL</b></td>
+                    <td>Endereço recurso solicitado no servidor.</td>
+                </tr>
+                <tr>
+                    <td><b>Header</b></td>
+                    <td>Informações adicionais sobre o cliente, navegador ou formato aceito.</td>
+                </tr>
+                <tr>
+                    <td><b>Body</b></td>
+                    <td>Corpo da mensagem (usado em métodos como POST para enviar dados).</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Exemplo: envio de formulário via POST.</td>
+                </tr>
+            </tfoot>
+        </table>
+</body>
+</html>

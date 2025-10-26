@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Estado do Brasil</title>
+    <style>
+        body{
+            font-family: Arial;
+            background-color: green;
+            margin: 30px;
+        }
+        h1{
+            text-align: center;
+            color: yellow;
+        }
+        table{
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+            background-color: white;
+        }
+        caption{
+            caption-side: top;
+            font-weight: bold;
+            padding: 10px;
+            color: blue;
+        }
+        th, td{
+            border: 1px solid;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th{
+            background-color: gray;
+        }
+        a{
+            text-decoration: none;
+            color:blueviolet;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .norte td{
+            background-color: greenyellow;
+        }
+        .nordeste td{
+            background-color: red;
+        }
+        .centro-oeste{
+            background-color: orange;
+        }
+        .sudeste{
+            background-color: yellow;
+        }
+        .sul{
+            background-color: brown;
+        }
+        tfoot td{
+            font-style: italic;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela de Estados do Brasil</h1>
+    <table>
+        <caption>Estados brasilerios ocupados por região.</caption>
+        <thead>
+            <tr>
+                <th>Índice</th>
+                <th>Região</th>
+                <th>Estado</th>
+                <th>Sigla</th>
+                <th>Capital</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="norte">
+                <td>1</td>
+                <td rowspan="7">Norte</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Acre" target="_blank">Acre</a></td>
+                <td>AC</td>
+                <td>Rio Branco</td>
+            </tr>
+            <tr class="norte">
+                <td>2</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Amap%C3%A1" target="_blank">Amapá</a></td>
+                <td>AP</td>
+                <td>Macapá</td>
+            </tr>
+            <tr class="norte">
+                <td>3</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Amazonas" target="_blank">Amazonas</a></td>
+                <td>AM</td>
+                <td>Manaus</td>
+            </tr>
+            <tr class="norte">
+                <td>4</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Par%C3%A1" target="_blank">Pará</a></td>
+                <td>PA</td>
+                <td>Belém</td>
+            </tr>
+            <tr class="norte">
+                <td>5</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Rond%C3%B4nia" target="_blank">Rondônia</a></td>
+                <td>RO</td>
+                <td>Porto Velho</td>
+            </tr>
+            <tr class="norte">
+                <td>6</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Roraima" target="_blank">Roraima</a></td>
+                <td>RR</td>
+                <td>Boa Vista</td>
+            </tr>
+            <tr class="norte">
+                <td>7</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Tocantins" target="_blank">Tocantins</a></td>
+                <td>TO</td>
+                <td>Palmas</td>
+            </tr>
+            <tr class="nordeste">
+                <td>8</td>
+                <td rowspan="9">Nordeste</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Alagoas" target="_blank">Alagoas</a></td>
+                <td>AL</td>
+                <td>Maceió</td>
+            </tr>
+            <tr class="nordeste">
+                <td>9</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Alagoas" target="_blank">Bahia</a></td>
+                <td>BA</td>
+                <td>Salvador</td>
+            </tr>
+            <tr class="nordeste">
+                <td>10</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Cear%C3%A1" target="_blank">Ceará</a></td>
+                <td>CE</td>
+                <td>Fortaleza</td>
+            </tr>
+            <tr class="nordeste">
+                <td>11</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Maranhão</a></td>
+                <td>MA</td>
+                <td>São Luís</td>
+            </tr>
+            <tr class="nordeste">
+                <td>12</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Para%C3%ADba" target="_blank">Paraíba</a></td>
+                <td>PB</td>
+                <td>João Pessoa</td>
+            </tr>
+            <tr class="nordeste">
+                <td>13</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Pernambuco" target="_blank">Pernambuco</a></td>
+                <td>PE</td>
+                <td>Recife</td>
+            </tr>
+            <tr class="nordeste">
+                <td>14</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Piau%C3%AD" target="_blank">Piauí</a></td>
+                <td>PI</td>
+                <td>Teresina</td>
+            </tr>
+            <tr class="nordeste">
+                <td>15</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Norte" target="_blank">Rio Grande do Norte</a></td>
+                <td>RN</td>
+                <td>Natal</td>
+            </tr>
+            <tr class="nordeste">
+                <td>16</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Sergipe" target="_blank">Sergipe</a></td>
+                <td>SE</td>
+                <td>Aracaju</td>
+            </tr>
+            <tr class="centro-oeste">
+                <td>17</td>
+                <td rowspan="4">Centro-Oeste</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Goi%C3%A1s" target="_blank">Goiás</a></td>
+                <td>GO</td>
+                <td>Goiânia</td>
+            </tr>
+            <tr class="centro-oeste">
+                <td>18</td>
+                <td><a href="https://chatgpt.com/c/68fbc226-64b4-8329-9faf-de054325e6f3#:~:text=https%3A//pt.wikipedia.org/wiki/Mato_Grosso" target="_blank">Mato Grosso</a></td>
+                <td>MT</td>
+                <td>Cuiabá</td>
+            </tr>
+            <tr class="centro-oeste">
+                <td>19</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Mato_Grosso_do_Sul" target="_blank">Mato Grosso do Sul</a></td>
+                <td>MS</td>
+                <td>Campo Grande</td>
+            </tr>
+            <tr class="centro-oeste">
+                <td>20</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Distrito_Federal_(Brasil)" target="_blank">Distrito Federal</a></td>
+                <td>DF</td>
+                <td>Brasília</td>
+            </tr>
+            <tr class="sudeste">
+                <td>21</td>
+                <td rowspan="4">Sudeste</td>
+                <td><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_(estado)" target="_blank">São Paulo</a></td>
+                <td>SP</td>
+                <td>São Paulo</td>
+            </tr>
+            <tr class="sudeste">
+                <td>22</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro_(estado)" target="_blank">Rio de Janeiro</a></td>
+                <td>RJ</td>
+                <td>Rio de Janeiro</td>
+            </tr>
+            <tr class="sudeste">
+                <td>23</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Minas_Gerais" target="_blank">Minas Gerais</a></td>
+                <td>MG</td>
+                <td>Belo Horizonte</td>
+            </tr>
+            <tr class="sudeste">
+                <td>24</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Esp%C3%ADrito_Santo_(estado)" target="_blank">Espirito Santo</a></td>
+                <td>ES</td>
+                <td>Vitória</td>
+            </tr>
+            <tr class="sul">
+                <td>25</td>
+                <td rowspan="3">Sul</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_blank">Paraná</a></td>
+                <td>PR</td>
+                <td>Curitiba</td>
+            </tr>
+            <tr class="sul">
+                <td>26</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Santa_Catarina" target="_blank">Santa Catarina</a></td>
+                <td>SC</td>
+                <td>Florinópolis</td>
+            </tr>
+            <tr class="sul">
+                <td>27</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Sul" target="_blank">Rio Grande do Sul</a></td>
+                <td>RS</td>
+                <td>Porto Alegre</td>
+            </tr>
+        </tbody>
+        <TFoot>
+            <tr>
+                <td colspan="5">Fonte: Wikipedia - Estados e Capitais do Brasil</td>
+            </tr>
+        </TFoot>
+    </table>
+    
+</body>
+</html>
