@@ -1,0 +1,130 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  green;
+    color: black;
+    margin: 0;
+    padding: 0 10px;
+    line-height: 1.6;
+}
+h1{
+    color: yellow;
+    text-align: center;
+}
+h2{
+    color: blue;
+    text-align: center;
+}
+h3{
+    color: #2bf;
+    text-align: center;
+}
+p{
+    margin: 10px;
+}
+a{
+    color: blueviolet;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover{
+    color: blueviolet;
+    text-decoration: underline;
+}
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+caption{
+    caption-side: top;
+    font-weight: bold;
+    padding: 10px;
+    color: #444;
+}
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background-color: gray;
+}
+.norte td{
+    background-color: greenyellow;
+}
+.nordeste td{
+     background-color: red;
+}
+.centro-oeste{
+     background-color: orange;
+}
+.sudeste{
+    background-color: yellow;
+}
+.sul{
+    background-color: brown;
+}
+.instrucoes{
+    background-color: whitesmoke;
+    border-left: 5px solid #0077cc;
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+form{
+    background-color: whitesmoke;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, select, textarea, button{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+input:focus, textarea:focus, select:focus{
+    border-color: #0077cc;
+    outline: none;
+}
+button{
+    background-color: whitesmoke;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+button:hover{
+    background-color: #005fa3;
+}
+nav{
+    background-color: #2b4a70;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+nav a{
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+}
+footer{
+    text-align: center;
+    font-style: italic;
+    margin-top: 50px;
+    color: #555;
+}
