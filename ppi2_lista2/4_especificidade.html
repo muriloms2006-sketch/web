@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 - Especifidade CSS</title>
+    <style>
+        p{
+            color: blue;
+            font-size: 18px;
+            background-color: #e3f2fd;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .destaque{
+            color: green;
+            background-color: #c8e6c9;
+        }
+        #importante{
+            color: red;
+            background-color: #ffcdd2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividade 4 - Especifidade CSS</h1>
+    <h2>Exemplo de conflitos entre seletores</h2>
+    <p>Este parágrafo tem apenas o estilo de seleto <strong>p</strong>.</p>
+    <p class="destaque">Este parágrafo tem classe <strong>destaque</strong>, que é mais forte que o seletor <strong>p</strong>.</p>
+    <p id="importante" class="destaque">
+        Este parágrafo tem um estilo <strong>inline</strong>.
+        Mesmo tendo classe e ID, o inline <em>vence em todos os outros</em>. 
+    </p>
+    <h2>Explicação:</h2>
+    <ul>
+        <li><strong>Seletor de elemento</strong> (p): 1 ponto.</li>
+        <li><strong>Classe</strong> (.destaque): 10 pontos.</li>
+        <li><strong>ID</strong> (#importante): 100 pontos.</li>
+        <li><strong>Inline</strong> (style= "..."): 1000 pontos, vence todos.</li>
+    </ul>
+    <p>
+        Portanto, a cor final é escolhida pela <strong>regra mais específica</strong>.  
+        Se duas regras tiverem a mesma especificidade, o navegador aplica a que foi 
+        <em>declarada por último</em> no código CSS.
+    </p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6CS - Display</title>
+    <style>
+        body{
+            height: 400px;
+            position: relative;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px;
+            font-family: Arial;
+        }
+        .box1{background: red; top: 20px; left: 20px;}
+        .box2{background: yellow; top: 20px; right: 20px;}
+        .box3{background: green; bottom: 20px; right: 20px;}
+        .box4{background: rgb(103, 54, 150); bottom: 20px; left: 20px;}
+        .box5{background: rgb(161, 79, 93); top: 150px; left: 50%; transform: translateX(-50%);}
+        .texto {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(49, 10, 223, 0.8);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+  <div class="box3">box3</div>
+  <div class="box4">box4</div>
+  <div class="box5">box5</div>
+  <p class="texto"> Usamos <strong>position: absolute</strong> para posicionar os blocos em locais específicos da tela. <br>
+        O <strong>body</strong> tem <strong>position: relative</strong>, servindo como referência. <br>
+        Cada <strong>div</strong> usa as propriedades <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> e <strong>left</strong>
+        para definir a posição exata. Assim, podemos colocar cada uma nos quatro cantos e uma no centro.</p>
+</body>
+</html>

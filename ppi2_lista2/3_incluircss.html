@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 - Formas de incluir</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            color: darkred;
+            text-align: center;
+        }
+        p.interno{
+            color: green;
+            font-size: 18px;
+            background-color: #e8f5e9;
+            padding: 8px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividade 3 - Formas de incluir</h1>
+    <h2>1. CSS inline</h2>
+    <p style="color: blue; font-size: 18px; background-color: #e3f2fd; padding: 5px; border-radius: 5px;">
+        Parágrafo estilizado usando <strong>CSS inline</strong>.
+        As regras de estilo estão <em>dentro do atributo "style"</em> da própria tag.
+    </p>
+    <h2>2. CSS interno</h2>
+    <p class="interno">
+        Parágrafo usa <strong>CSS interno</strong>, declarado dentro da tag
+        <code>&lt;style&gt;</code> no cabeçalho do documento.
+    </p>
+    <h2>3. CSS externo</h2>
+    <p class="externo">
+        Parágrafo utiliza <strong>CSS externo</strong>, aplicando a partir de um arquivo separado chamado
+        <code>style.css</code>
+    </p>
+    
+</body>
+</html>

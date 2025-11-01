@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 8 - Barquinho no Mar e Nuvem</title>
+
+  <style>
+    /* ======== Configuração geral ======== */
+    body {
+      margin: 0;
+      background-color: #87ceeb; /* Céu */
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* ======== O mar ======== */
+    .mar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 200px;
+      background-color: #1e88e5;
+    }
+
+    /* ======== O sol ======== */
+    .sol {
+      position: absolute;
+      top: 50px;
+      right: 100px;
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(255, 255, 0, 0.7);
+    }
+
+    /* ======== A nuvem ======== */
+    .nuvem {
+      position: absolute;
+      top: 80px;
+      left: -300px;
+      width: 120px;
+      height: 60px;
+      background-color: #ffffff;
+      border-radius: 50px;
+      box-shadow:
+        30px 10px 0 0 #ffffff,
+        60px 0px 0 0 #ffffff,
+        90px 15px 0 0 #ffffff;
+      animation: moverNuvem 25s linear infinite;
+      opacity: 0.9;
+    }
+
+    /* ======== O barco ======== */
+    .barco {
+      position: absolute;
+      bottom: 160px;
+      left: -200px; /* começa fora da tela */
+      width: 200px;
+      height: 80px;
+      animation: navegar 10s linear infinite;
+      z-index: 2;
+    }
+
+    /* Casco do barco */
+    .casco {
+      position: absolute;
+      bottom: 0;
+      width: 200px;
+      height: 40px;
+      background-color: #8b4513;
+      border-bottom-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+    }
+
+    /* Mastro */
+    .mastro {
+      position: absolute;
+      bottom: 40px;
+      left: 90px;
+      width: 8px;
+      height: 60px;
+      background-color: #3e2723;
+    }
+
+    /* Vela */
+    .vela {
+      position: absolute;
+      bottom: 80px;
+      left: 98px;
+      width: 60px;
+      height: 40px;
+      background-color: white;
+      clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    /* ======== Ondas ======== */
+    .onda {
+      position: absolute;
+      bottom: 190px;
+      width: 100%;
+      height: 20px;
+      background: repeating-linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.7) 0,
+        rgba(255, 255, 255, 0.7) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      animation: ondas 3s linear infinite;
+      z-index: 1;
+    }
+
+    /* ======== Animações ======== */
+    @keyframes navegar {
+      0% {
+        left: -220px;
+        bottom: 160px;
+      }
+      50% {
+        bottom: 170px;
+      }
+      100% {
+        left: 110%;
+        bottom: 160px;
+      }
+    }
+
+    @keyframes ondas {
+      0% { background-position-x: 0; }
+      100% { background-position-x: 100px; }
+    }
+
+    @keyframes moverNuvem {
+      0% { left: -300px; }
+      100% { left: 110%; }
+    }
+
+    /* ======== Texto ======== */
+    .texto {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.8);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Autor: Murilo Moreira de Souza - Data: 24/10/2025 -->
+
+  <div class="sol"></div>
+  <div class="nuvem"></div>
+  <div class="mar"></div>
+  <div class="onda"></div>
+
+  <div class="barco">
+    <div class="mastro"></div>
+    <div class="vela"></div>
+    <div class="casco"></div>
+  </div>
+
+  <div class="texto">
+    <strong>Atividade 8:</strong> Barquinho e Nuvem com CSS<br>
+    Usando position, z-index e @keyframes.
+  </div>
+</body>
+</html>
