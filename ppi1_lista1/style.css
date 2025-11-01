@@ -128,3 +128,10 @@ footer{
     margin-top: 50px;
     color: #555;
 }
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
