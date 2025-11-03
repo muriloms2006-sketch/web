@@ -5,48 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 3 - lista de contato</title>
     <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+        *{
             margin: 0;
             padding: 0;
+            box-sizing: content-box;
+            
         }
-        h1{
-            text-align: center;
-            background-color: #0078d7;
-            color: white;
-            padding: 15px;
-            margin: 0;
-        }
-        .container{
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #ece5dd;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
             padding: 30px;
         }
+        .container{
+            width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow:  0 2px 10px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .cabecalho{
+            background-color: #075e54;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
         .contato{
+            display: flex;
+            align-items: center;
             background-color: white;
             width: 250px;
             border-radius: 10px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow:  0 2px 20px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transformes 0.3s;
+            margin: 10px auto;
+            padding: 10px;
+            transition: transform 0.3s;
         }
         .contato:hover{
-            transform: translateX(-5px);
+            transform: scale(1.03);
+            background-color: #f5f5f5;
+            
         }
         .contato img{
-            width: 120px;
-            height: 120px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 10px;
+            margin-right: 15px;
         }
         .nome{
-            font-weight: bold;
+            margin: 0;
             color: #333;
-            margin-top: 18px;
         }
         .descricao{
             font-size: 14px;
@@ -56,8 +69,8 @@
     </style>
 </head>
 <body>
-    <h1>Lista de contatos</h1>
     <div class="container">
+        <div class="cabecalho">Lista de contatos</div>
         <div class="contato">
             <img src="data:image/jpeg;base64,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" alt="foto jacquin">
             <p class="nome">Erick Jacquin</p>
