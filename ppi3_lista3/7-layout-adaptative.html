@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7 - layout adpatative</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            display: gird;
+            grid-template-areas: 
+            "header header header"
+            "left banner right"
+            "left main right"
+            "low low right"
+            "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto 1fr auto auto;
+            height: 100vh;
+            gap: 5px;
+        }
+        header{
+            grid-area: header;
+            background-color: orange;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .banner{
+            grid-area: banner;
+            background-color: red;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            color: black;
+        }
+        .left{
+            grid-area: left;
+            background-color: green;
+            text-align: center;
+            padding: 10px;
+            color: black;
+        }
+        .main{
+            grid-area: main;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <div class="banner">Banner</div>
+        <div class="left">Left</div>
+        <div class="main">Main</div>
+        <div class="right">Right</div>
+        <div class="low">Low</div>
+    </div>
+</body>
+</html>
