@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - Bandeiras</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            text-align: center;
+        }
+        nav{
+            background: #333;
+            padding: 10px;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover{
+            color: yellow;
+        }
+        .bandeira{
+            width: 320px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 8px;
+            margin: 40px auto;
+            position: relative;
+            background-color: white;
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        #japao.bandeira > div.circulo{
+           width: 80px;
+           height: 80px;
+           background-color: red;
+           border-radius: 50%;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+        }
+        #alemanha.bandeira > div.faixa-preta{
+            background-color: black;
+            height: 33.33%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+        #alemanha.bandeira > div.faixa-vermelha{
+            background-color: red;
+            height: 33.33%;
+            width: 100%;
+            position: absolute;
+            top: 33.33%;
+        }
+         #alemanha.bandeira > div.faixa-amarela{
+            background-color: yellow;
+            height: 33.33%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        #holanda.bandeira > div.faixa-vermelha{
+            background-color: red;
+            height: 33.33%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+        #holanda.bandeira > div.faixa-branca{
+            background-color: white;
+            height: 33.33%;
+            width: 100%;
+            position: absolute;
+            top: 33.33%;
+        }
+        #holanda.bandeira > div.faixa-azul{
+            background-color: blue;
+            height: 33.33%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        #italia.bandeira > div.faixa-verde{
+            background-color: green;
+            height: 100%;
+            width: 33.33%;
+            position: absolute;
+            left: 0;
+        }
+        #italia.bandeira > div.faixa-branca{
+            background-color: white;
+            height: 100%;
+            width: 33.33%;
+            position: absolute;
+            left: 33.33%;
+        }
+        #italia.bandeira > div.faixa-vermelha{
+            background-color: red;
+            height: 100%;
+            width: 33.33%;
+            position: absolute;
+            right: 0;
+        }
+        #brasil.bandeira{
+            background-color: green;
+        }
+        #brasil.bandeira > div.losango{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        #brasil.bandeira > div.circulo{
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#japao">Japão</a>
+        <a href="#alemanha">Alemanha</a>
+        <a href="#holanda">Holanda</a>
+        <a href="#italia">Italia</a>
+        <a href="#brasil">Brasil</a>
+    </nav>
+     <h1>Bandeiras dos paises.</h1>
+     <h2>Japão</h2>
+  <div class="bandeira" id="japao">
+    <div class="circulo"></div>
+  </div>
+  <h2>Alemanha</h2>
+  <div class="bandeira" id="alemanha">
+    <div class="faixa-preta"></div>
+    <div class="faixa-vermelha"></div>
+    <div class="faixa-amarela"></div>
+  </div>
+  <h2>Holanda</h2>
+  <div class="bandeira" id="holanda">
+    <div class="faixa-vermelha"></div>
+    <div class="faixa-branca"></div>
+    <div class="faixa-azul"></div>
+  </div>
+  <h2>Itália</h2>
+  <div class="bandeira" id="italia">
+    <div class="faixa-verde"></div>
+    <div class="faixa-branca"></div>
+    <div class="faixa-vermelha"></div>
+  </div>
+  <h2>Brasil</h2>
+  <div class="bandeira" id="brasil">
+    <div class="losango"></div>
+    <div class="circulo"></div>
+  </div>
+</body>
+</html>

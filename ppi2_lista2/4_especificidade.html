@@ -5,43 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 4 - Especifidade CSS</title>
     <style>
-        p{
-            color: blue;
-            font-size: 18px;
-            background-color: #e3f2fd;
-            padding: 8px;
-            border-radius: 5px;
-        }
-        .destaque{
-            color: green;
-            background-color: #c8e6c9;
-        }
-        #importante{
-            color: red;
-            background-color: #ffcdd2;
-        }
-    </style>
+     churras { color: green; }
+     .fruta { color: gray; }
+     .churras { color: black; }
+     .churras[draggable="true"] { color: magenta; }
+     #lip1, #lip2, #lip3 { color: blue; }
+     #lip3.fruta { color: orange; }
+     .churras#lip5 { color: purple; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    ol {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    li {
+      font-size: 18px;
+      margin: 6px 0;
+    }
+    p.explicacao {
+      background-color: #fff8e1;
+      border-left: 4px solid #fbc02d;
+      padding: 10px;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Atividade 4 - Especifidade CSS</h1>
-    <h2>Exemplo de conflitos entre seletores</h2>
-    <p>Este parágrafo tem apenas o estilo de seleto <strong>p</strong>.</p>
-    <p class="destaque">Este parágrafo tem classe <strong>destaque</strong>, que é mais forte que o seletor <strong>p</strong>.</p>
-    <p id="importante" class="destaque">
-        Este parágrafo tem um estilo <strong>inline</strong>.
-        Mesmo tendo classe e ID, o inline <em>vence em todos os outros</em>. 
-    </p>
-    <h2>Explicação:</h2>
-    <ul>
-        <li><strong>Seletor de elemento</strong> (p): 1 ponto.</li>
-        <li><strong>Classe</strong> (.destaque): 10 pontos.</li>
-        <li><strong>ID</strong> (#importante): 100 pontos.</li>
-        <li><strong>Inline</strong> (style= "..."): 1000 pontos, vence todos.</li>
-    </ul>
-    <p>
-        Portanto, a cor final é escolhida pela <strong>regra mais específica</strong>.  
-        Se duas regras tiverem a mesma especificidade, o navegador aplica a que foi 
-        <em>declarada por último</em> no código CSS.
-    </p>
+    <h1>Atividade 4 - Especificidade de Seletores CSS</h1>
+
+  <ol>
+    <li id="lip0">Abacaxi</li>
+    <li class="fruta">Melão</li>
+    <li id="lip2" class="fruta">Pera</li>
+    <li id="lip3" class="fruta">Uva</li>
+    <li id="lip4" class="fruta">Maçã</li>
+    <li class="churras">Carne</li>
+    <li class="churras">Linguiça</li>
+    <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+  </ol>
+
+  <p class="explicacao">
+    <strong>Explicação das cores e especificidade:</strong><br><br>
+    • <b>Abacaxi</b> → Vermelho (<code>li { color: red; }</code>) — apenas o seletor de elemento foi aplicado.<br><br>
+    • <b>Melão</b> → Cinza (<code>.fruta { color: gray; }</code>) — classe tem mais peso que seletor de tag.<br><br>
+    • <b>Pera</b> → Azul (<code>#lip2 { color: blue; }</code>) — ID tem prioridade maior que classe.<br><br>
+    • <b>Uva</b> → Laranja (<code>#lip3.fruta { color: orange; }</code>) — combinação de ID + classe tem ainda mais peso.<br><br>
+    • <b>Maçã</b> → Cinza (<code>.fruta { color: gray; }</code>) — aplica apenas a classe.<br><br>
+    • <b>Carne</b> → Verde (<code>.churras { color: green; }</code>) — classe aplicada normalmente.<br><br>
+    • <b>Linguiça</b> → Preto (<code>li + li.churras { color: black; }</code>) — o seletor <code>li + li</code> seleciona o <em>irmão adjacente</em> da tag anterior.<br><br>
+    • <b>Pão de alho</b> → Magenta (<code>.churras[draggable="true"] { color: magenta; }</code>) — seletor de atributo tem maior peso que o seletor de classe isolado.
+  </p>
 </body>
 </html>

@@ -3,9 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atividade 7 - perfil</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: rgb(73, 190, 219);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .perfil{
+            position: relative;
+            background-color: rgb(223, 139, 14);
+            width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgb(223, 139, 14);
+            text-align: center;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+        .perfil-header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-color: brown;
+            z-index: 1;
+        }
+        .foto{
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            border-radius: 50%;
+            border: 4px solid white;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .conteudo{
+            position: relative;
+            margin-top: 60px;
+            padding: 20px;
+            z-index: 0;
+        }
+        .nome{
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 5px;
+        }
+        .cargo{
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .descricao{
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .redes{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .redes a{
+            text-decoration: none;
+            color: white;
+            background-color: #2b4a70;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .redes a:hover{
+            background-color: #1a2f4d;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="perfil">
+        <div class="perfil-header"></div>
+            <img src="data:image/jpeg;base64,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" alt="Foto de perfil" class="foto">
+            <div class="conteudo">
+                <p class="nome">Emanuel Santos</p>
+                <p class="cargo">Estudante do Vasco</p>
+                <p class="descricao">
+                    Gosto muito de praticar enegenharia civil, fazer marketing,
+                    trabalhar em educação financeira, e pilotar foguetes.
+                </p>
+                <div class="redes">
+                    <a href="https://github.com/" target="_blank">Git hub</a>
+                    <a href="https://br.linkedin.com/?mcid=6821526239111716925&src=go-pa&trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9102304&cid=&gclsrc=aw.ds&gad_source=1&gad_campaignid=12619604099&gbraid=0AAAAABhL5JN1Lm2FAlHYF8HlmPKOIr9la&gclid=Cj0KCQjw35bIBhDqARIsAGjd-ca7epOYChDfC75JyEPWazHW9584whESWhsnWhfOC9YYMAJshbn4GjsaAhzvEALw_wcB" target="_blank">Likedin</a>
+                    <a href="https://workspace.google.com/intl/pt-BR/gmail/">Email</a>
+                </div>
+            </div>
+    </div>
 </body>
 </html>

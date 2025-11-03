@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 1 - chat</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background-color: #e5ddd5;
+      margin: 0;
+      padding: 0;
+    }
+    .chat-container{
+      width: 400px;
+      height: 500px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin: 40px auto;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .chat-header{
+      background-color: #075e54;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .chat-body{
+      flex: 1;
+      background: rgb(85, 235, 235);
+      background-size: cover;
+      padding: 10px;
+      overflow-y: auto;
+      position: relative;
+    }
+    .mensagem{
+      max-width: 70%;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 5px 0;
+      clear: both;
+      font-size: 14px;
+      position: relative;
+    }
+    .contato{
+      background-color: #fff;
+      float: left;
+      color: #222;
+      border: 1px solid #ddd;
+    }
+    .usuario{
+      background-color: #dcf8c8;
+      float: right;
+      color: #000;
+    }
+    .hora{
+      font-size: 10px;
+      color: #666;
+      position: absolute;
+      bottom: 2px;
+      right: 8px;
+    }
+    .chat-footer{
+      background-color: #f0f0f0;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #ccc;
+    }
+    .chat-footer input{
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 14px;
+      outline: none;
+    }
+    .chat-footer button{
+      background-color: #075e54;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-left: 8px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .chat-footer button:hover{
+      background-color: #0b806a;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">Contato - Pedro</div>
+    <div class="chat-body">
+      <div class="mensagem contato">Oi, tube bem?
+        <span class="hora">12:00</span>
+      </div>
+      <div class="mensagem usuario">
+        Oi Pedro, estou bem e você ?
+        <span class="hora">12:05</span>
+      </div>
+      <div class="mensagem contato">
+        Tudo, só estou aqui para falar que mês que
+        vem vão lançar o novo jogo do Mario.
+        <span class="hora">12:08</span>
+      </div>
+      <div class="mensagem usuario">
+        Sério ?
+        <span class="hora">12:10</span>
+      </div>
+      <div class="mensagem contato">
+        Porém, o preço do jogo será por 500 reais.
+        <span class="hora">12:12</span>
+      </div>
+      <div class="mensagem usuario">
+        Putz, aí você me quebra viu.
+        <span class="hota">12:15</span>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" placeholder="Digite sua mensagem...">
+      <button>Enviar</button>
+    </div>
+  </div>
+</body>
+</html>
