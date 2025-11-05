@@ -1,70 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 4 - Especifidade CSS</title>
-    <style>
-     churras { color: green; }
-     .fruta { color: gray; }
-     .churras { color: black; }
-     .churras[draggable="true"] { color: magenta; }
-     #lip1, #lip2, #lip3 { color: blue; }
-     #lip3.fruta { color: orange; }
-     .churras#lip5 { color: purple; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    ol {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    li {
-      font-size: 18px;
-      margin: 6px 0;
-    }
-    p.explicacao {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 4 - Especifidades de CSS</title>
+  <style>
+    li{color: red;}
+    .churras{color: green;}
+    .fruta{color: gray;}
+    li+li.churras{color: black;}
+    .churras[draggable="true"]{color: magenta;}
+    #lip1,#lip2,#lip3{color: blue;}
+    #lip3.fruta{color: orange;}
+    ol>li.churras#lip5{color: purple;}
+    p.explicacao{
       background-color: #fff8e1;
       border-left: 4px solid #fbc02d;
       padding: 10px;
       font-size: 14px;
       margin-top: 20px;
     }
+    ol{
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
-    <h1>Atividade 4 - Especificidade de Seletores CSS</h1>
-
+  <h3>Atividade 4 - Especificidades de CSS</h3>
   <ol>
     <li id="lip0">Abacaxi</li>
     <li class="fruta">Melão</li>
-    <li id="lip2" class="fruta">Pera</li>
-    <li id="lip3" class="fruta">Uva</li>
-    <li id="lip4" class="fruta">Maçã</li>
+    <li id="lip2">Pera</li>
+    <li id="lip3">Uva</li>
+    <li id="lip4">Maçã</li>
     <li class="churras">Carne</li>
     <li class="churras">Linguiça</li>
     <li id="lip7" class="churras" draggable="true">Pão de alho</li>
   </ol>
-
   <p class="explicacao">
-    <strong>Explicação das cores e especificidade:</strong><br><br>
-    • <b>Abacaxi</b> → Vermelho (<code>li { color: red; }</code>) — apenas o seletor de elemento foi aplicado.<br><br>
-    • <b>Melão</b> → Cinza (<code>.fruta { color: gray; }</code>) — classe tem mais peso que seletor de tag.<br><br>
-    • <b>Pera</b> → Azul (<code>#lip2 { color: blue; }</code>) — ID tem prioridade maior que classe.<br><br>
-    • <b>Uva</b> → Laranja (<code>#lip3.fruta { color: orange; }</code>) — combinação de ID + classe tem ainda mais peso.<br><br>
-    • <b>Maçã</b> → Cinza (<code>.fruta { color: gray; }</code>) — aplica apenas a classe.<br><br>
-    • <b>Carne</b> → Verde (<code>.churras { color: green; }</code>) — classe aplicada normalmente.<br><br>
-    • <b>Linguiça</b> → Preto (<code>li + li.churras { color: black; }</code>) — o seletor <code>li + li</code> seleciona o <em>irmão adjacente</em> da tag anterior.<br><br>
-    • <b>Pão de alho</b> → Magenta (<code>.churras[draggable="true"] { color: magenta; }</code>) — seletor de atributo tem maior peso que o seletor de classe isolado.
+    <strong>Explicação das cores e especificidade:</strong>
+      <p>Abacaxi:  Vermelho (<code>li { color: red; }</code>) — apenas o seletor de elemento foi aplicado.</p>
+      <p>Melão:  Cinza (<code>.fruta { color: gray; }</code>) — classe tem mais peso que seletor de tag.</p>
+      <p>Pera: Azul (<code>#lip2 { color: blue; }</code>) — ID tem prioridade maior que classe.</p>
+      <p>Uva: Laranja (<code>#lip3.fruta { color: orange; }</code>) — combinação de ID + classe tem ainda mais peso.</p>
+      <p>Maçã: Cinza (<code>.fruta { color: gray; }</code>) — aplica apenas a classe.</p>
+      <p>Carne: Verde (<code>.churras { color: green; }</code>) — classe aplicada normalmente.</p>
+      <p>Linguiça: Preto (<code>li + li.churras { color: black; }</code>) — o seletor <code>li + li</code> seleciona o <em>irmão adjacente</em> da tag anterior.</p>
+      <p>Pão de alho: Magenta (<code>.churras[draggable="true"] { color: magenta; }</code>) — seletor de atributo tem maior peso que o seletor de classe isolado.</p>
   </p>
 </body>
 </html>
