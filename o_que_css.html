@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é CSS</title>
+    <style>
+        body{
+            font-family: bold;
+        }
+        @keyframes mudarcor {
+            from{background-color: blue;}
+            to{background-color: red;}
+        }
+        button{
+            border-radius: 50%;
+            padding: 50px;
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+        button:hover{
+            animation: mudarcor 1s forwards;
+            color: blueviolet;
+        }
+        button::before{
+            content: "clique aqui -> ";
+        }
+    </style>
+</head>
+<body>
+    <p>CSS é uma folha de estilo, onde ira ser definido a apârencia ou estilo, 
+        de cada elemento html da página.
+    </p>
+    <h2>Exemplo do uso de CSS</h2>
+    <p>Botão que muda de cor quando ao passar o mouse.</p>
+    <p>A frase <b>Pressiona aqui</b> mudar para outra cor</p>
+    <p>A frase <b>clique aqui</b> aparece do lado pressiona aqui</p>
+    <button>Pressiona aqui</button>
+</body>
+</html>
