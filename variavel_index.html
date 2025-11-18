@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #formulario{
+            display: flex;
+            flex-direction: column;
+        }
+        #listagem{
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button id="limpar">Limpar</button>
+    <div id="formulario">
+    <label for="id">id</label>
+    <input type="text" name="id" id="id" readonly>
+    <label for="nome">nome</label>
+    <input type="text" name="nome" id="nome">
+    <label for="id">email</label>
+    <input type="email" name="email" id="email">
+    <button id="botaoSalvar">Cadastrar</button>
+    </div>
+    <div id="listagem">
+    </div>
+    </div>
+    <script>
+        let inputid=document.querySelector("#id");
+        let inputnome=document.querySelector("#nome");
+        let inputemail=document.querySelector("#email");
+        let listagem=document.querySelector("#listagem");
+        let button=document.querySelector("#botaoSalvar");
+        let buttonlimpar=document.querySelector("#limpar");
+        buttonlimpar.addEventListener("click", ()=>{
+            localStorage.clear();
+            listagem.innerHTML="";
+        })
+        if(localStorage.getItem("listaNomes")){
+            listasNomes= JSON.parse(localStorage.getItem("listaNomes"));
+        }else{
+            listasNomes=[];
+        }
+        button.addEventListener("click", ()=>{
+            let maxid=listasNomes.length;
+            listasNomes.push(
+                {"id":maxid+1,
+                "nome":inputnome.value,
+                "email":inputemail.value
+                }
+            );
+            console.log(listasNomes)
+            listagemPessoas();
+            localStorage.setItem("listaNomes", JSON.stringify(listasNomes));
+        });
+        function listagemPessoas(){
+            listagem.innerHTML="";
+            listasNomes.forEach((e)=>{
+            item = `<div class="itemLista">
+            <input type="text" class="id", value=${e.id}>
+            <input type="text" class="nome" value=${e.nome}>
+            <input type="text" class="email" value=${e.email}>
+        </div>`;
+        listagem.innerHTML+=item;
+            })
+        }
+        listagemPessoas();
+    </script>
+</body>
+</html>
