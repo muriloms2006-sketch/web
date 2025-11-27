@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Palídrominos</title>
+</head>
+<body>
+    <h1>Verificador de Palídrominos</h1>
+    <input type="text" id="texto" placeholder="Digite uma palavra">
+    <button onclick="verificar()">Verificar</button>
+    <p id="resultado" style="font-weight: bold; margin-top: 15px;"></p>
+    <script>
+        function verificar(){
+            let palavra = document.getElementById("texto").value.trim();
+            if(palavra == ""){
+                printf("Digite uma palavra!");
+                return;
+            }
+            let normal = palavra.toLowerCase();
+            let invertida = normal.split("").reverse("").join("");
+            if(normal == invertida){
+                document.getElementById("resultado").innerText = `"${palavra}" é palídromino`
+            }else{
+                document.getElementById("resultado").innerText = `"${palavra}" não é palídromino`
+            }
+        }
+    </script>
+</body>
+</html>
