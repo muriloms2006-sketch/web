@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript</title>
+</head>
+<body onload="mostrarHora()">
+    <h1 id="titulo">O que é JavaScript</h1>
+    <p id="motivacao">
+        O JavaScript foi criado para permitir que páginas WEB fossem dinâmicas.
+    </p>
+    <p id="explicacao">
+        Ele pode rodar dentro do navegador ou no servidor através do Node.js.
+        O navegador limita os JS em uma sandbox por segurança, e possui objetos
+        globais como docuemnt, console, e alert.
+    </p>
+    <p id="hora"></p>
+    <script>
+        console.log("Página caregada do sucesso!");
+        alert("Bem-Vindo ao estudo de JavaScript!");
+        function mostrarHora(){
+            const agora = new Date();
+            document.getElementById("hora").innerHTML = agora.toLocaleDateString();
+        }
+    </script>
+</body>
+</html>

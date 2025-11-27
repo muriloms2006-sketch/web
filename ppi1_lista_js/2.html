@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo JS</title>
+</head>
+<body>
+    <button onclick="executar()">Executar</button>
+    <p id="pstring"></p>
+    <p id="pnumber"></p>
+    <p id="pboolean"></p>
+    <p id="pundefined"></p>
+    <p id="pnull"></p>
+    <p id="pobj"></p>
+    <p id="parray"></p>
+    <script>
+        function executar(){
+            let nome = "Murilo";
+            let idade = "19";
+            let ativo = true;
+            let nada = null;
+            let indefinido;
+            let pessoa = {nome: "João", idade:30};
+            let lista = [1,2,3];
+            document.getElementById("pstring").innerText = typeof nome;
+            document.getElementById("pnumber").innerText = typeof idade;
+            document.getElementById("pboolean").innerText = typeof ativo;
+            document.getElementById("pundefined").innerText = typeof indefinido;
+            document.getElementById("pnull").innerText = typeof nada;
+            document.getElementById("pobj").innerText = typeof pessoa;
+            document.getElementById("parray").innerText = typeof lista;
+            console.log("String + number = ", nome + idade);
+            console.log("boolean * number = ", ativo * idade);
+        }
+    </script>
+</body>
+</html>

@@ -12,7 +12,12 @@
         b=document.querySelector("button")
         div=document.querySelector("div");
         b.addEventListener("click", ()=>{
-            Math.
+            let rand=Math.random();
+            let min=Number.parseInt(prompt("Informa o Valor Mínimo do Intervalo:"));
+            let max=Number.parseInt(prompt("Informa o Valor Máximo do Intervalo:"));
+            random(rand*(max-min))+min;
+            console.log(random);
+            div.innerHTML=random;
         })
     </script>
 </body>
