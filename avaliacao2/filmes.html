@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar filmes</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef3ff;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .filme {
+            display: flex;
+            background: white;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .filme img {
+            width: 120px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .info {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="busca" placeholder="Digite o nome do filme...">
+        <button onclick="buscarFilmes()">Buscar</button>
+        <div id="resultado"></div>
+    </div>
+    <script>
+        function buscarFilmes(){
+            let titulo = document.getElementById("busca").value.trim();
+            if(titulo === ""){
+                alert("Digite um nome para pesquisar!");
+                return;
+            }
+            let url = `https://www.omdbapi.com/?apikey=4a3b711b&s=${titulo}`;
+            fetch(url)
+            .then(response => response.json())
+            .then(dados => {
+                let area = document.getElementById("resultado");
+                area.innerHTML = "";
+                if(dados.Response === "False"){
+                    area.innerHTML = `<p>Nenhum filme encontrado.</p>`;
+                    return;
+                }
+                dados.Search.forEach(filme => {
+                area.innerHTML += `
+                <div class="filme">
+                    <img src="${filme.Poster !== "N/A" ? filme.Poster: "https://via.placeholder.com/120"}">
+                    <div class="info">
+                        <h2>${filme.Title}</h2>
+                        <p><strong>Ano:</strong> ${filme.Year}</p>
+                        <p><strong>Tipo:</strong> ${filme.Type}</p>
+                        <p><strong>ID:</strong> ${filme.imdbID}</p>
+                    </div>
+                </div>
+                `;
+                });
+            })
+            .catch(erro => {
+                console.error("Erro no API:", erro);
+            });
+        }
+    </script>
+</body>
+</html>
