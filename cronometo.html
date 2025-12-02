@@ -4,8 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronometro</title>
+    <style>
+    body {
+        font-family: Arial;
+        background: #eef3ff;
+        padding: 20px;
+    }
+    #tempo {
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    ul {
+        margin-top: 20px;
+        background: #fff;
+        padding: 10px;
+        max-width: 300px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+    li {
+        padding: 5px;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+    }
+</style>
 </head>
 <body>
     <h1 id="tempo">00:00:00</h1>
+    <button onclick="start()">Iniciar (S)</button>
+    <button onclick="pause()">Pausar (P)</button>
+    <button onclick="stopTimer()">Parar (T)</button>
+    <h2>Registros de Pausa:</h2>
+    <ul id="pausas"></ul>
+    <script>
+        let inicio = null;
+        let pausado = 0;
+        let intervalo = null;
+        let momentoPausa = 0;
+        function formatar(ms){
+            let total = Math.floor(ms/1000);
+            let h = String(Math.floor(total/3600)).padStart(2, "0");
+            let m = String(Math.floor(total % 3600/60)).padStart(2, "0");
+            let s = String(total % 60).padStart(2,"0");
+            return `${h}:${m}:${s}`;
+        }
+        function start(){
+            if(!inicio){
+                inicio = Date.now();
+            }else{
+                pausado += Date.now() - momentoPausa;
+            }
+            intervalo = setInterval(() =>{
+                let agora = Date.now();
+                let tempoAtual = agora - inicio - pausado;
+                document.getElementById("tempo").innerText = formatar(tempoAtual);
+            }, 200);
+        }
+        function pause(){
+            clearInterval(intervalo);
+            momentoPausa = Date.now();
+            let tempoAtual = document.getElementById("tempo").innerText;
+            document.getElementById("pausas").innerHTML += `<li>${tempoAtual}</li>`
+        }
+        function stopTimer(){
+            clearInterval(intervalo);
+            inicio = null;
+            pausado = 0;
+            document.getElementById("tempo").innerText = "00:00:00";
+            document.getElementById("pausas").innerHTML = "";
+        }
+        document.addEventListener("keydown", function(e){
+            if(e.key === "s" || e.key === "S") start();
+            if(e.key === "p" || e.key === "P") pause();
+            if(e.key === "t" || e.key === "T") stopTimer();
+        });
+    </script>
 </body>
 </html>
